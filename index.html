@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Telemonitoramento de Drenagem | COP Recife</title>
+    <meta
+      name="description"
+      content="Site imersivo com os documentos completos da cotação de telemonitoramento aplicada ao sistema de drenagem e da proposta SO-26-042 COP Recife."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <canvas id="network-canvas" aria-hidden="true"></canvas>
+
+    <header class="topbar">
+      <a class="brand" href="#inicio" aria-label="Ir para o início">
+        <img class="brand-logo" src="logo.png" alt="Ativa Soluções" />
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav" id="primary-nav" aria-label="Navegação principal">
+        <a href="#inicio">Home</a>
+        <a class="nav-button" href="anexo-tecnico.pdf" target="_blank" rel="noreferrer">Anexo técnico</a>
+        <a class="nav-button accent" href="proposta-so-26-042.pdf" target="_blank" rel="noreferrer">Proposta SO-26-042</a>
+      </nav>
+    </header>
+
+    <main id="inicio">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-grid" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="hero-content">
+          <p class="eyebrow">Solução de telemonitoramento aplicada ao sistema de drenagem</p>
+          <h1 id="hero-title">Drenagem inteligente em tempo real.</h1>
+          <p class="hero-copy">
+            Solução integrada de telemonitoramento e automação baseada em IoT para acompanhar, em tempo real,
+            variáveis operacionais e ambientais críticas: nível, vazão, precipitação, alagamento e parâmetros
+            meteorológicos.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button primary" href="anexo-tecnico.pdf" target="_blank" rel="noreferrer">Acessar anexo técnico</a>
+            <a class="button secondary" href="proposta-so-26-042.pdf" target="_blank" rel="noreferrer">Acessar proposta</a>
+          </div>
+        </div>
+
+        <aside class="signal-panel" aria-label="Indicadores visuais do sistema">
+          <div class="radar-header">
+            <span>Radar meteorológico</span>
+            <strong>RECIFE / PE</strong>
+          </div>
+          <div class="radar">
+            <span></span>
+            <span></span>
+            <span></span>
+            <em class="axis north">N</em>
+            <em class="axis east">L</em>
+            <em class="axis south">S</em>
+            <em class="axis west">O</em>
+            <b class="rain-cell cell-one"></b>
+            <b class="rain-cell cell-two"></b>
+            <b class="rain-cell cell-three"></b>
+            <b class="rain-cell cell-four"></b>
+            <i></i>
+          </div>
+          <div class="radar-legend" aria-label="Legenda de intensidade do radar">
+            <span><b class="low"></b>Fraca</span>
+            <span><b class="mid"></b>Moderada</span>
+            <span><b class="high"></b>Forte</span>
+          </div>
+          <div class="metric">
+            <strong>Alagamentos no Recife</strong>
+          </div>
+          <div class="metric">
+            <strong>Telemetria e automação</strong>
+          </div>
+          <div class="metric">
+            <strong>2 acessos completos</strong>
+          </div>
+        </aside>
+      </section>
+
+      <section class="flood-stats reveal" aria-labelledby="stats-title">
+        <div class="section-heading">
+          <p class="eyebrow">Panorama no Brasil</p>
+          <h2 id="stats-title">Eventos recentes mostram a escala do risco hidrológico.</h2>
+        </div>
+
+        <div class="stats-grid">
+          <article class="stat-card reveal">
+            <span>Municípios atingidos</span>
+            <strong><b class="count-up" data-target="478">0</b></strong>
+            <p>Rio Grande do Sul, enchentes de 2024.</p>
+          </article>
+          <article class="stat-card reveal">
+            <span>Pessoas afetadas</span>
+            <strong><b class="count-up" data-target="2400000" data-format="compact">0</b></strong>
+            <p>Estimativa de afetados no Rio Grande do Sul em 2024.</p>
+          </article>
+          <article class="stat-card reveal">
+            <span>Vítimas fatais</span>
+            <strong><b class="count-up" data-target="106">0</b></strong>
+            <p>Grande Recife, chuvas intensas de 2022.</p>
+          </article>
+          <article class="stat-card reveal">
+            <span>Chuva em 24h</span>
+            <strong><b class="count-up" data-target="200" data-suffix="+ mm">0</b></strong>
+            <p>Registros superiores a 200 mm em municípios da Região Metropolitana do Recife.</p>
+          </article>
+        </div>
+
+        <p class="stats-source">
+          Fontes:
+          <a href="https://pt.wikipedia.org/wiki/Enchentes_no_Rio_Grande_do_Sul_em_2024" target="_blank" rel="noreferrer">
+            enchentes no RS em 2024
+          </a>
+          e
+          <a href="https://en.wikipedia.org/wiki/2022_Northeastern_Brazil_floods_and_mudslides" target="_blank" rel="noreferrer">
+            enchentes no Nordeste em 2022
+          </a>.
+        </p>
+      </section>
+
+      <section class="home-highlights reveal" aria-labelledby="highlights-title">
+        <div class="section-heading">
+          <p class="eyebrow">Principais conteúdos</p>
+          <h2 id="highlights-title">Da chuva intensa ao controle operacional em tempo real.</h2>
+        </div>
+
+        <div class="highlight-feature reveal">
+          <img
+            src="https://imagens.ne10.uol.com.br/veiculos/_midias/jpg/2022/05/28/806x444/1_whatsapp_image_2022_05_28_at_17_55_13-21114006.jpeg"
+            alt="Rua alagada no Recife com carros atravessando a água"
+          />
+          <div>
+            <p class="eyebrow">Resumo executivo</p>
+            <h3>Telemonitoramento, automação e dados em tempo real para pontos críticos de drenagem.</h3>
+            <p>
+              O projeto contempla fornecimento, instalação, configuração e integração de estações de monitoramento
+              distribuídas em campo, sensores industriais, unidades de aquisição de dados, comunicação celular e
+              alimentação autônoma por energia.
+            </p>
+          </div>
+        </div>
+
+        <div class="company-profile reveal">
+          <div class="company-copy">
+            <p class="eyebrow">Ativa Soluções</p>
+            <h3>Soluções IoT e M2M para Telemetria e Gerenciamento Remoto.</h3>
+            <p>
+              Desde 2004, a ATIVA Soluções atua no mercado de telemetria IoT (Internet of Things) e M2M
+              (Machine-to-Machine), desenvolvendo soluções para prover gerenciamento remoto de dados para diversos
+              segmentos de negócios.
+            </p>
+            <p>
+              A ATIVA Soluções possui certificação ISO 9001:2015 e seu portfólio conta com equipamentos que
+              possibilitam a conectividade e integração de sistemas eletrônicos, coleta e transmissão de dados através
+              de sensores diversos, bem como um sistema supervisório de desenvolvimento próprio que permite o
+              gerenciamento remoto através de uma plataforma web.
+            </p>
+            <p>
+              A empresa está situada em Santa Rita do Sapucaí, sul de Minas Gerais, um dos polos do desenvolvimento
+              tecnológico brasileiro, e possui centro de desenvolvimento próprio com 100% de tecnologia nacional.
+            </p>
+          </div>
+
+          <div class="company-video">
+            <video src="01.mp4" controls muted playsinline preload="metadata"></video>
+          </div>
+        </div>
+
+        <div class="highlight-grid">
+          <article class="highlight-card reveal">
+            <img
+              src="https://static.poder360.com.br/uploads/2024/06/chuvas-recife-15-jun-2024-848x477.jpeg"
+              alt="Rua alagada no Recife após chuvas"
+            />
+            <div>
+              <span>01</span>
+              <h3>Variáveis críticas</h3>
+              <p>Nível, vazão, precipitação, alagamento, parâmetros meteorológicos e dados operacionais em tempo real.</p>
+            </div>
+          </article>
+
+          <article class="highlight-card reveal">
+            <img
+              src="https://imagens.ne10.uol.com.br/veiculos/_midias/jpg/2022/05/28/whatsapp_image_2022_05_28_at_16_12_19__1_-21114150.jpeg"
+              alt="Área urbana do Recife inundada"
+            />
+            <div>
+              <span>02</span>
+              <h3>Quadros e automação</h3>
+              <p>RTU, CLP, instrumentação, proteção elétrica, telecomando e integração com ativos existentes.</p>
+            </div>
+          </article>
+
+          <article class="highlight-card reveal">
+            <img
+              src="https://imagens.ne10.uol.com.br/veiculos/_midias/jpg/2022/05/28/806x444/1_whatsapp_image_2022_05_28_at_17_55_13-21114006.jpeg"
+              alt="Carros passando por trecho alagado"
+            />
+            <div>
+              <span>03</span>
+              <h3>Supervisão web</h3>
+              <p>Visualização de dados em tempo real e históricos para apoiar supervisão e tomada de decisão.</p>
+            </div>
+          </article>
+
+          <article class="highlight-card reveal">
+            <img
+              src="https://static.poder360.com.br/uploads/2024/06/chuvas-recife-15-jun-2024-848x477.jpeg"
+              alt="Alagamento em rua residencial no Recife"
+            />
+            <div>
+              <span>04</span>
+              <h3>Implantação e serviços</h3>
+              <p>Site survey, projeto executivo, instalação, manutenção, suporte e sustentação operacional.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="flood-gallery reveal" id="cenario" aria-labelledby="flood-title">
+        <div class="section-heading">
+          <p class="eyebrow">Cenário urbano</p>
+          <h2 id="flood-title">Alagamentos em Recife como contexto visual da solução.</h2>
+        </div>
+
+        <div class="flood-grid">
+          <article class="flood-card expanded reveal">
+            <div class="flood-toggle">
+              <img
+                src="https://imagens.ne10.uol.com.br/veiculos/_midias/jpg/2022/05/28/806x444/1_whatsapp_image_2022_05_28_at_17_55_13-21114006.jpeg"
+                alt="Rua alagada no Recife com carros passando pela água"
+              />
+              <span class="flood-caption">Ruas alagadas após chuvas fortes</span>
+            </div>
+            <div class="flood-detail">
+              <p>
+                O escopo prevê módulos de monitoramento distribuídos em campo para aquisição, transmissão,
+                processamento e visualização de dados operacionais em tempo real.
+              </p>
+              <a href="https://jc.uol.com.br/pernambuco/2022/05/15016560-veja-imagens-de-como-ficaram-diversas-ruas-do-recife-apos-as-chuvas-que-cairam-neste-sabado-28.html" target="_blank" rel="noreferrer">
+                Fonte: JC
+              </a>
+            </div>
+          </article>
+
+          <article class="flood-card expanded reveal">
+            <div class="flood-toggle">
+              <img
+                src="https://imagens.ne10.uol.com.br/veiculos/_midias/jpg/2022/05/28/whatsapp_image_2022_05_28_at_16_12_19__1_-21114150.jpeg"
+                alt="Área urbana do Recife inundada durante chuva"
+              />
+              <span class="flood-caption">Bairros com vias submersas</span>
+            </div>
+            <div class="flood-detail">
+              <p>
+                As estações de monitoramento incluem sensores, unidades de aquisição RTU/datalogger, modems de
+                comunicação e sistemas de energia autônoma para operação em campo.
+              </p>
+              <a href="https://jc.uol.com.br/pernambuco/2022/05/15016560-veja-imagens-de-como-ficaram-diversas-ruas-do-recife-apos-as-chuvas-que-cairam-neste-sabado-28.html" target="_blank" rel="noreferrer">
+                Fonte: JC
+              </a>
+            </div>
+          </article>
+
+          <article class="flood-card expanded reveal">
+            <div class="flood-toggle">
+              <img
+                src="https://static.poder360.com.br/uploads/2024/06/chuvas-recife-15-jun-2024-848x477.jpeg"
+                alt="Rua da zona oeste do Recife alagada pelo transborde do Rio Tejipió"
+              />
+              <span class="flood-caption">Transborde e risco hidrológico</span>
+            </div>
+            <div class="flood-detail">
+              <p>
+                A solução considera monitoramento de nível por radar, vazão por ultrassom, precipitação,
+                alagamento, comportas, conjuntos motobomba e grandezas elétricas da localidade.
+              </p>
+              <a href="https://www.poder360.com.br/brasil/em-24h-recife-registra-40-da-media-de-chuvas-do-para-junho/" target="_blank" rel="noreferrer">
+                Fonte: Poder360
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="overview reveal" id="visao" aria-labelledby="overview-title">
+        <div>
+          <p class="eyebrow">Conteúdo dos documentos</p>
+          <h2 id="overview-title">Sensoriamento e telemonitoramento urbano integrados.</h2>
+        </div>
+        <div class="overview-copy">
+          <p>
+            O Anexo A estabelece os requisitos técnicos mínimos para a prestação de serviços integrados de natureza
+            tecnológica, voltados ao monitoramento, supervisão e suporte à tomada de decisão em tempo real.
+          </p>
+          <p>
+            A Proposta Técnica e Comercial SO-26-042 apresenta a implantação de uma solução IoT para aquisição,
+            transmissão, processamento e visualização de dados de campo, contemplando PCDs, quadros de automação,
+            sensores, comunicação, energia e serviços.
+          </p>
+        </div>
+      </section>
+
+      <section class="document-hub reveal" id="documentos" aria-labelledby="documents-title">
+        <div class="section-heading">
+          <p class="eyebrow">Documentos oficiais</p>
+          <h2 id="documents-title">Leia os dois documentos oficiais.</h2>
+        </div>
+
+        <div class="pdf-access-grid">
+          <a class="pdf-access-card" href="anexo-tecnico.pdf" target="_blank" rel="noreferrer">
+            <img
+              src="https://imagens.ne10.uol.com.br/veiculos/_midias/jpg/2022/05/28/806x444/1_whatsapp_image_2022_05_28_at_17_55_13-21114006.jpeg"
+              alt="Alagamento urbano no Recife"
+            />
+            <div>
+              <span>Anexo A</span>
+              <strong>Termo de Referência: Sensoriamento e Telemonitoramento Urbano</strong>
+              <small>Especificações técnicas, equipamentos, supervisão web, site survey, instalação e suporte.</small>
+              <em>Abrir documento oficial</em>
+            </div>
+          </a>
+          <a class="pdf-access-card" href="proposta-so-26-042.pdf" target="_blank" rel="noreferrer">
+            <img
+              src="assets/hero-weather-radar.png"
+              alt="Radar meteorológico e dados de precipitação"
+            />
+            <div>
+              <span>SO-26-042</span>
+              <strong>Proposta Técnica e Comercial: PCDs e Serviços</strong>
+              <small>Soluções IoT e M2M, PCDs, quadros, sensores, comunicação, energia e condições comerciais.</small>
+              <em>Abrir documento oficial</em>
+            </div>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>Telemonitoramento aplicado ao sistema de drenagem</span>
+      <a href="#inicio">Voltar ao topo</a>
+    </footer>
+
+    <footer class="credit-footer">
+      <a href="https://gaijin-agency.vercel.app/" target="_blank" rel="noreferrer">Criado por Gaijin Creative</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
